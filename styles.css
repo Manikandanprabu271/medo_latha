@@ -1,0 +1,126 @@
+:root{
+  --bg:#FFF7F0;
+  --card:#ffffff;
+  --accent:#FF6B6B;
+  --muted:#7D7A7A;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Nunito Sans', system-ui, -apple-system, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg), #FFF2F8 60%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:24px;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Card */
+.card{
+  width:100%;
+  max-width:880px;
+  background:var(--card);
+  border-radius:18px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1fr 380px;
+  gap:0;
+}
+
+/* Left content */
+.content{
+  padding:40px 36px;
+}
+.heading{
+  font-size:28px;
+  margin:0 0 10px 0;
+  color:#2B2B2B;
+  line-height:1.12;
+}
+.sub{
+  color:var(--muted);
+  margin:6px 0 18px 0;
+  font-size:15px;
+}
+
+.poem{
+  background: linear-gradient(90deg, rgba(255,107,107,0.06), rgba(255,171,145,0.03));
+  border-radius:12px;
+  padding:18px;
+  margin-top:12px;
+  font-size:16px;
+  color:#2d2d2d;
+  line-height:1.6;
+  white-space:pre-line;
+}
+
+.bullets{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.chip{
+  padding:10px 14px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#FFF4F4,#FFF7EE);
+  box-shadow: 0 4px 12px rgba(255,107,107,0.06);
+  font-weight:600;
+  font-size:14px;
+  color:#b33f3f;
+}
+
+.closing{
+  margin-top:22px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.avatar{
+  width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#FFD6D6,#FFB3B3);
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#922;
+  box-shadow: 0 6px 18px rgba(232,120,120,0.12);
+}
+.closing p{margin:0;color:#3b3b3b}
+.muted{color:var(--muted);margin-top:6px}
+
+/* Right panel - visual */
+.visual{
+  padding:24px;
+  background: linear-gradient(180deg,#FFF6F6,#FFF1F4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* cake */
+.cake{
+  width:220px;height:220px;border-radius:20px;background:linear-gradient(180deg,#FFEFEF,#FFD7D7);
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+.frosting{width:180px;height:60px;border-radius:12px 12px 8px 8px;background:linear-gradient(180deg,#FFFFFF,#FFF2F2);margin-bottom:8px;box-shadow:inset 0 -6px 12px rgba(255,200,200,0.25)}
+.candles{display:flex;gap:8px;margin-bottom:10px}
+.candle{width:8px;height:28px;background:#FF6B6B;border-radius:4px;position:relative}
+.flame{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:12px}
+
+/* balloons */
+.balloon{position:absolute;border-radius:999px;opacity:0.95}
+.b1{width:110px;height:140px;background:linear-gradient(180deg,#FFD1D1,#FF9E9E);left:-30px;top:10px}
+.b2{width:80px;height:110px;background:linear-gradient(180deg,#FDE7FF,#F7C7FF);right:-20px;top:40px}
+.b3{width:70px;height:100px;background:linear-gradient(180deg,#FFF6D6,#FFEAA1);left:60px;bottom:20px}
+
+.cake-title{font-weight:700;color:#8C2E2E;margin-bottom:6px;}
+.cake-sub{font-size:13px;color:#6b4a4a;}
+
+/* responsive */
+@media (max-width:880px){
+  .card{grid-template-columns:1fr;}
+  .visual{order:-1;padding:18px}
+  .content{padding:20px}
+}
